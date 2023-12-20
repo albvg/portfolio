@@ -1,0 +1,38 @@
+* {
+    font-family: 'Trochut';
+}
+
+body {
+ background: url(../images/bg.png);
+ background-size: cover;
+ background-repeat: repeat-y;
+} 
+
+.titleBubble {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+    margin: 0 auto;
+    margin-top: 155px;
+    width: 680px;
+    height: 680px;
+    background-color: #F99CC8;
+    
+    text-shadow: 3px 3px 5px #FFB69A;
+    border-radius: 50%;
+    line-height: 5px;
+}
+
+.titleTxt {
+    font-size: 140px;
+    color: #FDEDDD;
+    
+}
+
+.subtitleTxt{
+    font-size: 80px;
+    margin-top: 0;
+    color: #FDEDDD;
+}
