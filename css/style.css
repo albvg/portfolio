@@ -1,18 +1,57 @@
+/* ------------------------------------------------------------------ */
+
+
+/* Librería de colores utilizando variables */
+:root {
+
+}
+
+
+
+/* ------------------------------------------------------------------ */
+
+
+
+/* Aplicada la fuente 'Trochut' a todos los elementos */
 * {
     font-family: 'Trochut';
 }
 
+
+
+/* ------------------------------------------------------------------ */
+
+
+
+/* El elemento body con un margen de 0 en todos sus lados, 
+una altura mínima y un linear-gradient para hacer ese fondo de varios colores */
 body {
     margin: 0;
     min-height: 100vh;
     background: linear-gradient(171deg, #F896E1 6.11%, #FF9BA3 32.49%, #FF9F9A 45.43%, #FFA392 57.41%, #FFA68C 65.48%, #FFA887 69.22%, #FCA2A7 76.96%, #FB9FB8 82.23%, #F99CC8 87.2%, #F99CC8 96.86%, #F896E1 97.92%);
 }
 
-.mainContainer {
+
+
+/* ------------------------------------------------------------------ */
+
+
+
+/* --------------- CONTENIDO PRINCIPAL ------------------------ */
+
+
+
+/* Contenedor principal */
+.mainContainer { 
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
+
+
+/* --------- Burbuja 1 [albavg] --------- */
+
+/* Burbuja con mi nombre/logo en la esquina superior izquierda */
 .nameBubble {
     width: 160px;
     height: 160px;
@@ -21,11 +60,46 @@ body {
     left: 35px;
 }
 
+/* Tamaño de la imagen */
 .nameBubble img {
     width: 140px;
     height: 140px;
 }
 
+/* Animación para que la burbuja flote */
+.float {
+    animation: floatingBubble 4s linear infinite alternate, sideways 2s ease-in-out infinite alternate;
+}
+
+/* Keyframes de las animaciones (animación de lado a lado y de arriba a abajo) */
+@keyframes sideways {
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left: 20px;
+    }
+}
+
+@keyframes floatingBubble {
+     0% {
+        top: 40px;
+    }
+    100% {
+        top: 20px;
+    }
+}
+
+/* ---------  --------- */
+
+
+
+
+
+
+/* --------- Burbuja 2 [diseño ux ui] --------- */
+
+/* Contenedor de la burbuja y el texto */
 .designBubble {
     display: flex;
     flex-direction: row;
@@ -38,18 +112,28 @@ body {
     gap: 15px
 }
 
+/* Texto junto a la burbuja */
 .designBubble-txt {
     width: 150px;
     color: #FDEDDD;
     font-size: 30px;
 }
 
-
+/* La propia burbuja (tamaño) */
 .designBubble img {
     width: 50px;
     height: 50px;
 }
 
+/* ---------  --------- */
+
+
+
+
+
+/* --------- Burbuja 3 [portfolio 2024] --------- */
+
+/* Disposición de la burbuja principal */
 .titleBubble {
     display: flex;
     flex-direction: column;
@@ -67,19 +151,271 @@ body {
     line-height: 5px;
 }
 
+/* La elipse de la burbuja */
 .titleImg {
     position: absolute;
     width: 780px;
     z-index: -1;
 }
 
+/* Título */
 .titleTxt {
     font-size: 155px;
     color: #FDEDDD;
 }
 
+/* Subtítulo */
 .subtitleTxt{
     font-size: 80px;
     margin-top: 0;
     color: #FDEDDD;
+}
+
+/* ---------  --------- */
+
+
+
+
+
+/* --------- Índice de burbujas --------- */
+
+/* Contenedor del índice (texto e imagen) */
+.indexContainer {
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 250px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Contenedor de las secciones del índice (texto) */
+.indexList {
+    list-style: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    font-size: 80px;
+    width: 100%;
+    top: 420px;
+}
+
+/* Color de la fuente de las secciones */
+.indexSection {
+    color: #FDEDDD;
+}
+
+
+/* Posiciones y efecto hover de cada sección */
+.indexSection1 {
+    position: absolute;
+    right: 250px;
+    transition: text-shadow .3s;
+}
+
+.indexSection1:hover, .indexSection2:hover, .indexSection3:hover, .indexSection4:hover {
+    text-shadow: 3px 2px 7px #fdedddcc;
+}
+
+.indexSection2 {
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    transition: text-shadow .3s;
+}
+
+.indexSection3 {
+    position: absolute;
+    top: 330px;
+    right: 110px;
+    transition: text-shadow .3s;
+}
+
+.indexSection4 {
+    position: absolute;
+    top: 630px;
+    left: 300px;
+    transition: text-shadow .3s;
+}
+
+/* --------------------------------- */
+
+/* ---------  --------- */
+
+
+
+
+/* --------------- SECCIÓN DEL PORTFOLIO ------------------------ */
+
+
+.portfolioSection {
+    height: 100%;
+
+}
+
+.sectionTitle {
+    font-size: 90px;
+    color: #FDEDDD;
+    text-shadow: 3px 3px 5px #F896E1;
+    text-align: center;
+}
+
+.sectionBanner {
+    width: 90%;
+    background-color: #F99CC8;
+    transition: transform .5s, box-shadow .3s;
+    margin: 0 auto;
+    height: 50vh;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sectionBanner:hover {
+    transform: scale(1.01);
+    box-shadow: 8px 8px 20px #fdeddd80;
+}
+
+.bannerText {
+    font-size: 120px;
+    color: #FBDFD5;
+    text-shadow: 3px 3px 5px #FFA887;
+}
+
+.bannerSubtitle {
+    font-size: 35px;
+    color: #FDEDDD;
+}
+
+.sectionGallery {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.galleryContainer {
+    background: linear-gradient(139deg, rgba(251, 223, 213, 0.00) 17.03%, #FBDFD5 80.11%);
+    width: 30%;
+    height: 35vh;
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px #FFA68C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+.galleryContainer:hover {
+    transform: scale(1.05);
+}
+
+.galleryImg {
+    width: 80%;
+}
+
+.galleryName {
+    font-size: 35px;
+    margin: 0 auto;
+    color: #2882DE;
+    font-family: 'Nunito';
+}
+
+
+.portfolioFooter {
+    height: 10vh;
+    width: auto;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: #FBDFD5;
+    font-size: 40px;
+}
+
+#loader {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: linear-gradient(-45deg, #f72269, #FF78B9, #ff906e, #ff6338);
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 1s ease;
+    animation: gradient 3s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.disappear {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bubbleContainer {
+    display: flex;
+    margin: 0 auto;
+    width: 40%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble {
+    border-radius: 50%;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(139deg, rgba(251, 223, 213, 0.00) 17.03%, #FBDFD5 80.11%);
+    animation: bounce 2s infinite alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1) translate(0,0px);
+      }
+    20% {
+        transform: scaleY(0.95) scaleX(1.05);
+      }
+    50% {
+        transform: scaleY(0.98) scaleX(0.9) translate(0, 20px);
+      }
+    100% {
+        transform: scale(1) translate(0,0px);
+      }
+}
+
+.bubbleText {
+    font-size: 50px;
+    color: #FBDFD5;
+    text-shadow: 3px 3px 5px #FFB69A;
+    font-weight: 700;
 }

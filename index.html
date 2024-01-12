@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Trochut:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&family=Trochut:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 
 </head>
@@ -21,13 +21,105 @@
             <img class="titleImg" src="images/elipse1.png" alt="">
         </div>
 
-        <div class="nameBubble">
+        <div class="nameBubble float">
             <img src="images/logo.png" alt="">
         </div>
         <div class="designBubble">
             <h3 class="designBubble-txt">diseño ux ui</h3>
             <img src="images/lightbubble.png" alt="">
         </div>
+        <div class="indexContainer">
+            <img class="bubblePath" src="images/bubblesPath.png" alt="">
+            <div class="indexList">
+                <a href="about-me.html"><span class="indexSection indexSection1">sobre mí</span></a>
+                <a href=""><span class="indexSection indexSection2">ux ui design</span></a>
+                <a href=""><span class="indexSection indexSection3">mini proyectos</span></a>
+                <a href=""><span class="indexSection indexSection4">ilustraciones</span></a>
+            </div>
+            
+        </div>
     </main>
+
+    <section class="portfolioSection">
+        <div class="sectionBanner">
+        </div>
+    </section>
+
+    <section class="portfolioSection">
+        <h1 class="sectionTitle">Galería de proyectos</h1>
+        <div class="sectionGallery">
+            <div class="galleryContainer">
+                <img class="galleryImg" src="images/barkibu-logo.png" alt="">
+                <h2 class="galleryName">Pet Health Insurance</h2>
+            </div>
+            <div class="galleryContainer">
+                <img class="galleryImg" src="" alt="">
+            </div>
+            <div class="galleryContainer">
+                <img class="galleryImg" src="" alt="">
+            </div>
+            <div class="galleryContainer">
+                <img class="galleryImg" src="" alt="">
+            </div>
+            <div class="galleryContainer">
+                <img class="galleryImg" src="" alt="">
+            </div>
+            <div class="galleryContainer">
+                <img class="galleryImg" src="" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div id="loader">
+        <div class="bubbleContainer">
+            <div class="bubble">
+                <img src="images/star.png" alt="">
+            </div>  
+        </div>
+        
+    </div>
+
+    <footer class="portfolioFooter">
+        <span>Alba's Portfolio 2024</span>
+    </footer>
+
+<script>
+
+    let loader = document.getElementById('loader');
+
+    window.onload = (event) => {
+    setTimeout(function() {
+        loader.classList.add("disappear");
+        setTimeout(function() {
+            loader.remove();
+        }, 1250);
+    }, 3000);
+    };
+
+    const bannerContent = [
+        {title: "ux ui design",
+        subtitle: "Experiencia de usuario y Diseño de interfaces"},
+        {title: "web design",
+        subtitle: "Diseño web con HTML5, CSS3 y JavaScript"}
+        ];
+
+    const banner = document.querySelector(".sectionBanner");
+    const bannerText = document.querySelector(".bannerText");
+    const bannerSubtitle = document.querySelector(".bannerSubtitle");
+
+    const bannerInterval = setInterval(cambiarBanner, 2500);
+
+    var i = 0;
+
+    function cambiarBanner() {
+        console.log(bannerContent[i++]);
+        if(i==2){i=0};
+        banner.innerHTML = 
+        `<span class="bannerText">${bannerContent[i].title}</span>
+        <span class="bannerSubtitle">${bannerContent[i].subtitle}</span>`;
+    }
+
+</script>
+
 </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alba's Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about-me.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&family=Trochut:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+    <main class="mainContainer">
+        <a href="index.html"><img class="backBubble" src="images/arrow-bubble.png" alt=""></a>
+        <div class="titleContainer">
+            <h1 class="titleText">sobre mí</h1>
+        </div>
+        <div class="infoContainer">
+            <p class="infoText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque minus fugit dolor, unde quae quidem optio quisquam expedita, nemo aspernatur enim architecto, corporis culpa soluta repellat laborum quaerat delectus hic.</p>
+        </div>
+    </main>
+
+    <div id="loader">
+        <div class="bubbleContainer">
+            <div class="bubble">
+                <img src="images/star.png" alt="">
+            </div>  
+        </div>
+        
+    </div>
+
+
+<script>
+    let loader = document.getElementById('loader');
+
+    window.onload = (event) => {
+        setTimeout(function() {
+            loader.classList.add("disappear");
+            setTimeout(function() {
+                loader.remove();
+            }, 1250);
+        }, 2000);
+    };
+</script>
+</body>
+
+
+</html>

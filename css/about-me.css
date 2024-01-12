@@ -1,0 +1,46 @@
+body {
+    overflow: hidden;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
+    margin: 250px auto;
+}
+
+.titleContainer {
+    width: 20%;
+    line-height: 100px;
+}
+
+.titleText {
+    font-size: 150px;
+    color: #FDEDDD;
+    text-shadow: 3px 3px 5px #FFB69A;
+}
+
+.infoContainer {
+    width: 30%;
+
+}
+
+.infoText {
+    font-size: 30px;
+}
+
+.backBubble {
+    position: fixed;
+    top: 390px;
+    left: 100px;
+    width: 8%;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.backBubble:hover {
+    transform: scale(1.05);
+}
+
