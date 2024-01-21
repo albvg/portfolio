@@ -5,71 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alba's Portfolio</title>
 
+    <!-- ------- Links de las hojas de estilos y las fuentes de Google Fonts ------------ -->
+
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- -------------------------------------------------- -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&family=Trochut:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
+    <!-- -------------------------------------------------- -->
 
 </head>
 <body>
 
+    <!-- El contenedor principal que agrupa las 'burbujas' 
+        principales junto al índice de las distintas páginas -->
     <main class="mainContainer">
+
+        <div class="burgerMenuContainer">
+            <a id="burgerModal"></a>
+        </div>
+
         <div class="titleBubble">
-            <h1 class="titleTxt">Portfolio</h1>
-            <h2 class="subtitleTxt">2024</h2>
-            <img class="titleImg" src="images/elipse1.png" alt="">
+            <h1 class="titleTxt">Hi!</h1>
+            <h2 class="subtitleTxt">I'm Alba</h2>
+            <img class="titleImg" src="images/title-elipse.png" alt="">
         </div>
 
         <div class="nameBubble float">
             <img src="images/logo.png" alt="">
         </div>
         <div class="designBubble">
-            <h3 class="designBubble-txt">diseño ux ui</h3>
-            <img src="images/lightbubble.png" alt="">
+            <h3 class="designBubble-txt">ux ui design</h3>
+            <img src="images/bubble-sizeM.png" alt="">
         </div>
+
+
+        <!-- Primera idea de lo que sería el índice cuando tenga más proyectos
         <div class="indexContainer">
-            <img class="bubblePath" src="images/bubblesPath.png" alt="">
-            <div class="indexList">
-                <a href="about-me.html"><span class="indexSection indexSection1">sobre mí</span></a>
-                <a href=""><span class="indexSection indexSection2">ux ui design</span></a>
-                <a href=""><span class="indexSection indexSection3">mini proyectos</span></a>
-                <a href=""><span class="indexSection indexSection4">ilustraciones</span></a>
-            </div>
-            
-        </div>
+            <div class="bubblePath">
+                <div class="bubblePathIndex">
+                    <div class="bubblePathContent">
+                        <img src="images/bubble-sizeM.png" alt="">
+                        <a href="about-me.html"><span class="indexSection">sobre mí</span></a>
+                    </div>
+                </div>    
+                <div class="bubblePathIndex">
+                    <div class="bubblePathContent">
+                        <a href=""><span class="indexSection">ux ui design</span></a>
+                        <img src="images/bubble-sizeS.png" alt="">
+                    </div>
+                </div>   
+                <div class="bubblePathIndex">
+                    <div class="bubblePathContent">
+                        <img src="images/bubble-sizeL.png" alt="">
+                        <a href=""><span class="indexSection">mini proyectos</span></a>
+                    </div>
+                </div>
+                <div class="bubblePathIndex">
+                    <div class="bubblePathContent">
+                        <a href=""><span class="indexSection">ilustraciones</span></a>
+                        <img src="images/bubble-sizeXL.png" alt="">
+                    </div>
+                </div>
+            </div>   
+        </div>-->
     </main>
 
+    <!-- La primera sección del portfolio usando la etiqueta section y consiguiendo los 
+        datos del archivo datos.json y el script en el archivo index.js que consiste en un banner 
+        con un intervalo que enseña los dos campos de estudio a los que me dedico -->
     <section class="portfolioSection">
-        <div class="sectionBanner">
+        <a href="web-uxui-design.html"><div class="sectionBanner"></div></a>
+    </section>
+
+    <!-- Segunda sección usando la etiqueta section y consiguiendo los 
+        datos del archivo datos.json y el script en el archivo index.js construyendo la galería 
+        de los distintos proyectos que he realizado -->
+    <section class="portfolioSection">
+        <h1 class="sectionTitle">My projects</h1>
+        <div class="sectionGallery" id="galeriaP">
         </div>
     </section>
 
-    <section class="portfolioSection">
-        <h1 class="sectionTitle">Galería de proyectos</h1>
-        <div class="sectionGallery">
-            <div class="galleryContainer">
-                <img class="galleryImg" src="images/barkibu-logo.png" alt="">
-                <h2 class="galleryName">Pet Health Insurance</h2>
-            </div>
-            <div class="galleryContainer">
-                <img class="galleryImg" src="" alt="">
-            </div>
-            <div class="galleryContainer">
-                <img class="galleryImg" src="" alt="">
-            </div>
-            <div class="galleryContainer">
-                <img class="galleryImg" src="" alt="">
-            </div>
-            <div class="galleryContainer">
-                <img class="galleryImg" src="" alt="">
-            </div>
-            <div class="galleryContainer">
-                <img class="galleryImg" src="" alt="">
-            </div>
-        </div>
-    </section>
+    <!-- Texto para avisar de proyectos próximos 
+        usando la etiqueta span ya que es una frase corta -->
+    <span class="soonText">More projects soon</span>
 
+    <!-- El loader al cargar la página, cuenta con animaciones y un setTimeout -->
     <div id="loader">
         <div class="bubbleContainer">
             <div class="bubble">
@@ -79,46 +104,37 @@
         
     </div>
 
+    <!-- El pie de la web con la etiqueta footer -->
     <footer class="portfolioFooter">
-        <span>Alba's Portfolio 2024</span>
+        <span>© Alba's Portfolio 2024</span>
+        <ul class="linkList">
+            <li><a href="https://www.linkedin.com/in/albagimenez/" target="_blank">linkedin</a></li>
+            <li>|</li>
+            <li><a href="https://albagimenez.super.site/" target="_blank">case studies</a></li>
+        </ul>
     </footer>
 
-<script>
+    <!-- El menú para el responsive design en pantallas más pequeñas -->
+    <div class="burgerModalContainer" id="menuModal">
+        <div class="burgerModalContent">
+            <div>
+                <span class="closeModal"><img src="images/close-icon.svg" alt=""></span>
+                <h2 class="menuTitle">Menú</h2>
+                
+                <ul class="menuList">
+                    <li class="menuListLabel">sobre mí</li>
+                    <li class="menuListLabel">ux ui design</li>
+                    <li class="menuListLabel">mini proyectos</li>
+                    <li class="menuListLabel">ilustraciones</li>
+                </ul>
+            </div>
+            
+        </div>
 
-    let loader = document.getElementById('loader');
+    </div>
 
-    window.onload = (event) => {
-    setTimeout(function() {
-        loader.classList.add("disappear");
-        setTimeout(function() {
-            loader.remove();
-        }, 1250);
-    }, 3000);
-    };
-
-    const bannerContent = [
-        {title: "ux ui design",
-        subtitle: "Experiencia de usuario y Diseño de interfaces"},
-        {title: "web design",
-        subtitle: "Diseño web con HTML5, CSS3 y JavaScript"}
-        ];
-
-    const banner = document.querySelector(".sectionBanner");
-    const bannerText = document.querySelector(".bannerText");
-    const bannerSubtitle = document.querySelector(".bannerSubtitle");
-
-    const bannerInterval = setInterval(cambiarBanner, 2500);
-
-    var i = 0;
-
-    function cambiarBanner() {
-        console.log(bannerContent[i++]);
-        if(i==2){i=0};
-        banner.innerHTML = 
-        `<span class="bannerText">${bannerContent[i].title}</span>
-        <span class="bannerSubtitle">${bannerContent[i].subtitle}</span>`;
-    }
-
+<!-- El script cuyo source proviene del archivo js correspondiente -->
+<script src="js/index.js">
 </script>
 
 </body>

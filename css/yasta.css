@@ -1,0 +1,65 @@
+body {
+    background: url(../images/proyectos/yasta/yasta-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+* {
+    font-family: var(--yasta);
+}
+
+.mainContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.nameContainer {
+    width: 190%;
+    padding: 50px;
+    padding-bottom: 20px;
+    grid-area: 3 / 1 / 5;
+    justify-self: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+}
+
+.nameImg {
+    width: 100%;
+    
+}
+
+.mockupContainer img {
+    width: 100%;
+}
+
+.mockupContainer {
+    width: 85%;
+    grid-area: 2 / 3 / 4 / last-line;
+    justify-self: right;
+}
+
+.backLink {
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+
+    .mockupContainer {
+        padding: 0px;
+    }
+
+    .text1 {
+        margin: 0;
+    }
+
+    .barkibuDrawings {
+        padding-bottom: 100px;
+    }
+
+    body {
+         background-repeat: repeat;
+    }
+   
+
+}

@@ -1,0 +1,171 @@
+body {
+    background: url(../images/proyectos/barkibu/barkibu-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+* {
+    font-family: var(--barkibu);
+}
+
+.mainContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.nameContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-family: 'Nunito';
+    grid-row: 2;
+    gap: 20px;
+    justify-self: center;
+    padding: 50px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    
+}
+
+.nameTitle {
+    margin: 0;
+    font-size: 80px;
+    color: #2882DE;
+    text-align: center;
+    
+}
+
+.nameSubtitle {
+    margin: 0;
+    margin-top: -40px;
+    font-size: 30px;
+    color: #123C70;
+    text-align: center;
+}
+
+.nameImg {
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: -20px;
+    
+}
+
+.mockupContainer img {
+    width: 100%;
+}
+
+.mockupContainer {
+    width: 80%;
+    grid-column: 4;
+    grid-area: 2 / 5 / 4 / last-line;
+    padding-left: 90px;
+}
+
+.barkibuDrawings {
+    grid-area: 4 / 1 / 5;
+    align-self: start;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.barkibuDrawings img {
+    width: 100%;
+}
+
+.barkibuPalette {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    grid-row: 3;
+    grid-area: second-line / 1 / 3;
+}
+
+.swatch {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(3px 7px 4px rgba(2, 38, 133, 0.18));
+}
+
+.color1 {
+    background-color: #2882DE;
+}
+
+.color2 {
+    background-color: #123C70;
+}
+
+.color3 {
+    background-color: #F6F7F9;
+}
+
+.color4 {
+    background-color: #FFFFFF;
+}
+
+.color5 {
+    background-color: #41638D;
+}
+
+.color6 {
+    background-color: #96A4B5;
+}
+
+.barkibuMap {
+    width: 100%;
+    grid-row: 4;
+    grid-column: 1;
+    justify-items: center;
+    margin-top: 70px;
+    grid-area: 3 / 2 / 6 / 4;
+    margin-left: 160px;
+}
+
+.barkibuMap img {
+    width: 100%;
+}
+
+.barkibuLofi {
+    grid-area: 2 / 2 / 4 / 5;
+    margin-left: 160px;
+    width: 70%;
+
+}
+
+.barkibuLofi img {
+    width: 100%;
+}
+
+.text1 {
+    color: #41638D;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 60px;
+    grid-area: 1 / 5 / 1 / last-line;
+}
+
+.backLink {
+    color: #2882DE;
+}
+
+@media screen and (max-width: 768px) {
+
+    .mockupContainer {
+        padding: 0px;
+    }
+
+    .text1 {
+        margin: 0;
+    }
+
+    .barkibuDrawings {
+        padding-bottom: 100px;
+    }
+
+    body {
+         background-repeat: repeat;
+    }
+   
+
+}
+

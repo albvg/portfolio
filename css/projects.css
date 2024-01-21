@@ -1,0 +1,204 @@
+
+:root {
+
+    --barkibu: 'Nunito';
+    --btm: 'Nunito';
+    --cc: 'Jua';
+    --miui: 'Roboto';
+    --yasta: 'Nunito';
+}
+
+
+body {
+    margin: 0;
+}
+
+.mainContainer {
+    height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.backLink {
+    text-decoration: none;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    font-size: 25px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.backLink:hover {
+    opacity: 1;
+}
+
+#loader {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 1s ease;
+    animation: gradient 3s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.disappear {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bubbleContainer {
+    display: flex;
+    margin: 0 auto;
+    width: 40%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble {
+    border-radius: 50%;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background: white;
+    animation: bounce 2s infinite alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bubble img {
+    width: 80%;
+    margin-left: 20px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1) translate(0,0px);
+      }
+    20% {
+        transform: scaleY(0.95) scaleX(1.05);
+      }
+    50% {
+        transform: scaleY(0.98) scaleX(0.9) translate(0, 20px);
+      }
+    100% {
+        transform: scale(1) translate(0,0px);
+      }
+}
+
+#loader {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: linear-gradient(-45deg, #f72269, #FF78B9, #ff906e, #ff6338);
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 1s ease;
+    animation: gradient 3s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.disappear {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bubbleContainer {
+    display: flex;
+    margin: 0 auto;
+    width: 40%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble {
+    border-radius: 50%;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(139deg, rgba(251, 223, 213, 0.00) 17.03%, #FBDFD5 80.11%);
+    animation: bounce 2s infinite alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1) translate(0,0px);
+      }
+    20% {
+        transform: scaleY(0.95) scaleX(1.05);
+      }
+    50% {
+        transform: scaleY(0.98) scaleX(0.9) translate(0, 20px);
+      }
+    100% {
+        transform: scale(1) translate(0,0px);
+      }
+}
+
+.bubbleText {
+    font-size: 50px;
+    color: #FBDFD5;
+    text-shadow: 3px 3px 5px #FFB69A;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        margin-top: 90px;
+    } 
+
+    .barkibuMap, .barkibuLofi {
+        display: none;
+    }
+
+    .miuiIcons, .miuiBtns, .miuiDesignpr {
+        display: none;
+    }
+
+    
+
+}

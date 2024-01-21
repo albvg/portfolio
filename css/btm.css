@@ -1,0 +1,65 @@
+body {
+    background: url(../images/proyectos/btm/btm-bg.png);
+    background-size: cover;
+}
+
+* {
+    font-family: var(--btm);
+}
+
+.mainContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.nameContainer {
+    width: 120%;
+    grid-area: 4 / 2 / 5 / 4;
+    gap: 30px;
+    justify-self: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    
+}
+
+.nameImg {
+    width: 100%;
+    
+}
+
+.backLink {
+    color: #7886FF;
+}
+
+
+.btmMockupContainer img {
+    width: 100%;
+}
+
+.btmMockupContainer {
+    width: 150%;
+    grid-area: 3 / 5 / 7 / 7 ;
+    justify-self: center;
+    align-self: center;
+
+}
+
+@media screen and (max-width: 768px) {
+    .nameContainer {
+        width: 90%
+    } 
+
+    .btmMockupContainer {
+        width: 90%;
+    }
+
+    body {
+        overflow-y: hidden;
+    }
+
+
+
+}

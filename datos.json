@@ -1,0 +1,25 @@
+{"bannerData": [
+    {"title": "ux ui design",
+    "subtitle": "user experience and user interface design"},
+    {"title": "web design",
+    "subtitle": "HTML5, CSS3 y JavaScript"}],
+
+"galleryData": [
+    {"html": "proyectos/barkibu.html",
+    "img": "images/proyectos/barkibu/barkibu-logo.png",
+    "class": "x1"},
+    {"html": "proyectos/miui-clock.html",
+    "img": "images/proyectos/miui-clock/miui-logo.png",
+    "class": "x2"},
+    {"html": "proyectos/btm.html",
+    "img": "images/proyectos/btm/btm-logo.png",
+    "class": "x3"},
+    {"html": "proyectos/cc.html",
+    "img": "images/proyectos/chefconnect/cc-logo.png",
+    "class": "x4"},
+    {"html": "proyectos/yasta.html",
+    "img": "images/proyectos/yasta/yasta-logo.png",
+    "class": "x5"}]
+}
+
+

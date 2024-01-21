@@ -3,6 +3,13 @@
 
 /* Librería de colores utilizando variables */
 :root {
+    
+    --primary-color: #F896E1;
+    --secondary-color: #FFB69A;
+
+    --font-color: #FDEDDD;
+    
+
 
 }
 
@@ -17,6 +24,10 @@
     font-family: 'Trochut';
 }
 
+/* Aplicado a todas las etiquetas a (links) */
+a {
+    text-decoration: none;
+}
 
 
 /* ------------------------------------------------------------------ */
@@ -31,7 +42,7 @@ body {
     background: linear-gradient(171deg, #F896E1 6.11%, #FF9BA3 32.49%, #FF9F9A 45.43%, #FFA392 57.41%, #FFA68C 65.48%, #FFA887 69.22%, #FCA2A7 76.96%, #FB9FB8 82.23%, #F99CC8 87.2%, #F99CC8 96.86%, #F896E1 97.92%);
 }
 
-
+ 
 
 /* ------------------------------------------------------------------ */
 
@@ -131,7 +142,7 @@ body {
 
 
 
-/* --------- Burbuja 3 [portfolio 2024] --------- */
+/* --------- Burbuja 3 [Hi! I'm Alba] --------- */
 
 /* Disposición de la burbuja principal */
 .titleBubble {
@@ -154,91 +165,155 @@ body {
 /* La elipse de la burbuja */
 .titleImg {
     position: absolute;
-    width: 780px;
+    width: 680px;
     z-index: -1;
+}
+
+/* La luz de la elipse */
+.titleLightBubble {
+    position: absolute;
+    width: 20%;
+    z-index: -2;
+    top: 530px;
+    right: 350px;
 }
 
 /* Título */
 .titleTxt {
-    font-size: 155px;
+    font-size: 210px;
     color: #FDEDDD;
 }
 
 /* Subtítulo */
 .subtitleTxt{
-    font-size: 80px;
+    font-size: 120px;
     margin-top: 0;
-    color: #FDEDDD;
+    animation: fontcolor 3s infinite alternate;
+    text-shadow: 3px 3px 7px var(--font-color);
 }
 
-/* ---------  --------- */
+/* Cambio de color del subtítulo */
+@keyframes fontcolor {
+    0% {
+        color: #F896E1;
+    }
 
+    10% {
+        color: #FF9BA3;
+    }
 
+    20% {
+        color: #FF9F9A;
+    }
 
+    30% {
+        color: #FFA392;
+    }
+
+    40% {
+        color: #FFA68C;
+    }
+
+    50% {
+        color: #FFA887 ;
+    }
+
+    60% {
+        color: #FCA2A7 ;
+    }
+
+    70% {
+        color: #FB9FB8 ;
+    }
+
+    80% {
+        color: #F99CC8 ;
+    }
+
+    90% {
+        color: #F99CC8 ;
+    }
+
+    100% {
+        color: #F896E1 ;        
+    }
+}
 
 
 /* --------- Índice de burbujas --------- */
 
-/* Contenedor del índice (texto e imagen) */
+/* Estilos del índice comentado como idea anteriormente */
+/*
 .indexContainer {
     margin: 0 auto;
     margin-top: 5%;
     margin-bottom: 250px;
-    width: 70%;
+    width: 90%;
     display: flex;
     justify-content: center;
     position: relative;
 }
 
-/* Contenedor de las secciones del índice (texto) */
-.indexList {
-    list-style: none;
+.bgBubbles {
     position: absolute;
+    left: 27%;
+}
+
+.bgBubbles img {
+    width: 130%;
+}
+
+.bubblePath {
+    position: relative;
+    margin-top: 23%;
+}
+
+.bubblePathIndex {
+    width: 50%;
+    position: relative;
+    padding: 10px 0;
+    
+}
+
+.bubblePathContent {
+    padding: 30px 0px;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    gap: 100px;
-    font-size: 80px;
-    width: 100%;
-    top: 420px;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
 }
 
-/* Color de la fuente de las secciones */
+.bubblePathIndex:nth-child(odd):after {
+    left: -16px;
+    
+  }
+
+.bubblePathIndex:nth-child(even) {
+    left: 0;
+    text-align: right;
+}
+
+.bubblePathIndex:nth-child(odd) {
+    left: 40%;
+    padding-left: 80px;
+}
+
+
+.bubblePathIndex:last-child {
+    left: 10%;
+}
+
 .indexSection {
-    color: #FDEDDD;
+    color: var(--font-color);
+    font-size: 70px;
+    line-height: 40px;
 }
 
-
-/* Posiciones y efecto hover de cada sección */
-.indexSection1 {
-    position: absolute;
-    right: 250px;
-    transition: text-shadow .3s;
-}
 
 .indexSection1:hover, .indexSection2:hover, .indexSection3:hover, .indexSection4:hover {
     text-shadow: 3px 2px 7px #fdedddcc;
-}
-
-.indexSection2 {
-    position: absolute;
-    top: 120px;
-    left: 100px;
-    transition: text-shadow .3s;
-}
-
-.indexSection3 {
-    position: absolute;
-    top: 330px;
-    right: 110px;
-    transition: text-shadow .3s;
-}
-
-.indexSection4 {
-    position: absolute;
-    top: 630px;
-    left: 300px;
-    transition: text-shadow .3s;
-}
+} */
 
 /* --------------------------------- */
 
@@ -252,7 +327,7 @@ body {
 
 .portfolioSection {
     height: 100%;
-
+    
 }
 
 .sectionTitle {
@@ -262,23 +337,18 @@ body {
     text-align: center;
 }
 
+/* Banner */
 .sectionBanner {
-    width: 90%;
+    width: 100%;
     background-color: #F99CC8;
-    transition: transform .5s, box-shadow .3s;
-    margin: 0 auto;
+    margin: 300px auto 100px auto;
     height: 50vh;
-    border-radius: 30px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
-
-.sectionBanner:hover {
-    transform: scale(1.01);
-    box-shadow: 8px 8px 20px #fdeddd80;
 }
 
 .bannerText {
@@ -292,6 +362,7 @@ body {
     color: #FDEDDD;
 }
 
+/* Galería */
 .sectionGallery {
     width: 80%;
     margin: 0 auto;
@@ -308,7 +379,6 @@ body {
     width: 30%;
     height: 35vh;
     border-radius: 30px;
-    box-shadow: 3px 3px 5px #FFA68C;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -320,6 +390,36 @@ body {
 
 .galleryContainer:hover {
     transform: scale(1.05);
+    box-shadow: 8px 8px 20px #fdeddd80;
+}
+
+.x1 {
+    background: none;
+    background-color: white;
+}
+
+.x2 {
+    background: none;
+    background-color: lightgray;
+}
+
+.x3 {
+    background: #7886FF;
+}
+
+.x4 {
+    background: none;
+    background-color: rgb(255, 242, 226);
+}
+
+.x5 {
+    background: url(../images/proyectos/yasta/yasta-bg.png);
+    background-size: contain;
+}
+
+.x6 {
+    background: none;
+    background-color: #1A232F;
 }
 
 .galleryImg {
@@ -333,19 +433,69 @@ body {
     font-family: 'Nunito';
 }
 
+.galleryLink {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 346px;
+}
+
+.soonText {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font-size: 40px;
+    color: #FDEDDD;
+    font-weight: 700;
+}
+
+/* ---------  --------- */
+
+
+
+
+/* --------------- PIE DEL PORTFOLIO ------------------------ */
 
 .portfolioFooter {
     height: 10vh;
     width: auto;
     margin-top: 200px;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 100px;
     color: #FBDFD5;
     font-size: 40px;
 }
 
+/* Lista de links útiles */
+.linkList {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+    
+}
+
+.linkList li a {
+    color: var(--font-color);
+    font-weight: 700;
+    font-family: 'Nunito';
+    font-size:30px;
+}
+
+/* ---------  --------- */
+
+
+
+
+/* --------------- LOADER DE LA WEB ------------------------ */
+
+/* Estilos y animaciones para el loader */
 #loader {
     display: block;
     position: fixed;
@@ -418,4 +568,449 @@ body {
     color: #FBDFD5;
     text-shadow: 3px 3px 5px #FFB69A;
     font-weight: 700;
+}
+
+/* ---------  --------- */
+
+
+
+
+/* --------------- MENU PARA PANTALLAS PEQUEÑAS ------------------------ */
+
+/* Escondemos el menú en la resolución de pantalla por defecto */
+.burgerMenuContainer {
+    display: none;
+}
+
+.burgerModalContainer {
+    display: none;
+}
+
+
+
+/* ---------  --------- */
+
+
+
+
+/* --------------- PÁGINA MULTIPAGE ------------------------ */
+
+.pages {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% * 2);
+    height: 70vh;
+    overflow-x: hidden;
+    margin-top: 10%;
+    transition: transform 0.5s ease;
+}
+
+.page {
+    flex: 1;
+    color: #FDEDDD;
+    font-size: 40px;
+}
+
+.page img {
+    width: 20%;
+}
+
+#page1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#page2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: fixed;
+    top: 40px;
+    left: 35.5%;
+}
+
+.btn {
+    padding: 20px 50px;
+    border: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: #FDEDDD;
+    border-radius: 10px;
+    background-color: inherit;
+    border: 3px solid #FDEDDD;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #F99CC8;
+    text-shadow: 3px 3px 5px #FFA887;
+    box-shadow: 8px 8px 20px #fdeddd80;
+}
+
+/* ---------  --------- */
+
+
+
+
+/* --------------- BURBUJA PARA IR ATRÁS ------------------------ */
+
+.backBubble {
+    position: fixed;
+    top: 390px;
+    left: 100px;
+    width: 8%;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.backBubble:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/* ---------  --------- */
+
+
+
+
+/* --------------- RESPONSIVE DESIGN ------------------------ */
+
+
+@media screen and (max-width: 768px) {
+
+
+
+.mainContainer {
+    width: 100%;
+}
+
+/* --------- Burbuja 1 [albavg] --------- */
+
+/* Burbuja con mi nombre/logo en la esquina superior izquierda */
+.nameBubble {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+}
+
+/* Tamaño de la imagen */
+.nameBubble img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Animación para que la burbuja flote */
+.float {
+    animation: floatingBubble 4s linear infinite alternate, sideways 2s ease-in-out infinite alternate;
+}
+
+/* Keyframes de las animaciones (animación de lado a lado y de arriba a abajo) */
+@keyframes sideways {
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left: 20px;
+    }
+}
+
+@keyframes floatingBubble {
+     0% {
+        top: 20px;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+/* ---------  --------- */
+
+
+
+
+
+
+/* --------- Burbuja 2 [diseño ux ui] --------- */
+
+/* Contenedor de la burbuja y el texto */
+.designBubble {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: fit-content;
+    height: 50px;
+    position: absolute;
+    left: 25px;
+    bottom: 30px;
+    gap: 15px
+}
+
+/* Texto junto a la burbuja */
+.designBubble-txt {
+    width: 150px;
+    color: #FDEDDD;
+    font-size: 30px;
+}
+
+/* La propia burbuja (tamaño) */
+.designBubble img {
+    width: 50px;
+    height: 50px;
+}
+
+/* ---------  --------- */
+
+
+
+
+
+/* --------- Burbuja 3 [portfolio 2024] --------- */
+
+/* Disposición de la burbuja principal */
+.titleBubble {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    margin: 0 auto;
+    margin-top: 155px;
+    width: 100%;
+    height: 450px;
+    /*background: linear-gradient(139deg, rgba(251, 223, 213, 0.00) 17.03%, #FBDFD5 80.11%);*/
+    
+    text-shadow: 3px 3px 5px #FFB69A;
+    border-radius: 50%;
+    line-height: 5px;
+}
+
+/* La elipse de la burbuja */
+.titleImg {
+    position: absolute;
+    width: 90%;
+    z-index: -1;
+}
+
+/* La luz de la elipse */
+.titleLightBubble {
+    display: none;
+}
+
+/* Título */
+.titleTxt {
+    font-size: 160px;
+    color: #FDEDDD;
+}
+
+/* Subtítulo */
+.subtitleTxt{
+    font-size: 80px;
+    margin-top: 0;
+    color: #FDEDDD;
+}
+
+/* ---------  --------- */
+
+
+/* --------- Índice de burbujas --------- */
+
+/* Contenedor del índice (texto e imagen) */
+.indexContainer {
+    display: none;
+}
+
+.bgBubbles {
+    display: none;}
+
+
+
+
+/* --------------------------------- */
+
+
+
+/* --------- Pie de la web --------- */
+.portfolioFooter {
+    font-size: 30px;
+}
+
+.linkList li a {
+    font-size: 20px;
+}
+
+/* --------------------------------- */
+
+
+
+/* --------- Menú desplegable --------- */
+
+.burgerMenuContainer {
+    display: block;
+    position: fixed;
+    right: 30px;
+    top: 40px;
+    z-index: 1;
+}
+
+.burgerMenuContainer a {
+    content: url(../images/burger-menu.svg);
+}
+
+.burgerModalContainer {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    animation: openMenu 1s;
+}
+
+@keyframes openMenu {
+    from {
+        right: -400px;
+    }
+    to {
+        right: 0px;
+    }
+}
+
+.burgerModalContent {
+    background: linear-gradient(171deg, #F896E1 6.11%, #FF9BA3 32.49%, #FF9F9A 45.43%, #FFA392 57.41%, #FFA68C 65.48%, #FFA887 69.22%, #FCA2A7 76.96%, #FB9FB8 82.23%, #F99CC8 87.2%, #F99CC8 96.86%, #F896E1 97.92%);
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.menuTitle {
+    font-size: 50px;
+    padding: 20px 40px;
+    color: #FDEDDD;
+
+}
+
+.menuList {
+    list-style: none;
+    font-size: 30px;
+    padding: 0;
+}
+
+.menuListLabel {
+    padding: 30px 30px;
+    width: 70%;
+    background: linear-gradient(139deg, rgba(251, 223, 213, 0.00) 17.03%, #FBDFD5 80.11%);
+    margin-bottom: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #FDEDDD;
+    text-shadow: 3px 3px 5px #FFA887;
+}
+
+
+.closeModal {
+    color: #FCA2A7;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    
+}
+
+/* --------------------------------- */
+
+
+/* --------- Banner --------- */
+.sectionBanner {
+    margin-top: 350px;
+    height: 40vh;
+    text-align: center;
+}
+
+.bannerText {
+    font-size: 90px;
+    color: #FBDFD5;
+    text-shadow: 3px 3px 5px #FFA887;
+}
+
+.bannerSubtitle {
+    font-size: 25px;
+    color: #FDEDDD;
+}
+
+/* --------- Galería --------- */
+.sectionGallery {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.galleryContainer {
+    width: 100%;
+    height: 35vh;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+.sectionTitle {
+    font-size: 70px;
+    line-height: 50px;
+    color: #FDEDDD;
+    text-shadow: 3px 3px 5px #F896E1;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.soonText {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font-size: 35px;
+    color: #FDEDDD;
+    font-weight: 700;
+    text-align: center;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galleryContainer:nth-child(4) {
+    display: none;
+}
+
+.galleryContainer:last-child {
+    display: none;
+}
+
+
 }
