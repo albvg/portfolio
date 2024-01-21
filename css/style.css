@@ -847,6 +847,10 @@ body {
     font-size: 30px;
 }
 
+.linkList {
+    gap: 30px;
+}
+
 .linkList li a {
     font-size: 20px;
 }
