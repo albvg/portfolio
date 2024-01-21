@@ -40,5 +40,5 @@ const btmMockup = ['../images/proyectos/btm/btm-Img1.png','../images/proyectos/b
         setTimeout(function() {
             loader.remove();
         }, 1250);
-    }, 3000);
+    }, 2000);
     };
